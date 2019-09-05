@@ -38,6 +38,7 @@ int solve_with_threads (unsigned int nthreads, unsigned int nargs, unsigned int 
 	pthread_mutex_destroy(&start_mux);
 	pthread_mutex_destroy(&solution_mux);
 
+	free((pthread_t *) threads);
 	free((unsigned int *) start);
 	free((unsigned int *) saved_pairs);
 
